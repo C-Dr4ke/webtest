@@ -1,0 +1,299 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+body {
+    background-color: lightgray;
+}
+
+/* Titre */
+h2{
+  
+  color: #DC5E44;
+  font-size: 40px;
+
+}
+h4{
+  
+  color: #DC5E44;
+  font-size: 32px;
+  text-align: center;
+}
+
+/* Menu navigation */
+nav a{
+  
+  color: #DC5E44;
+}
+
+a{
+  text-decoration: none;
+}
+
+/* BUTTON */
+
+button{
+  border-radius: 30px;
+  background-color: #DC5E44;
+  font-size: 15px;
+  margin: 30px 0 30px 0;
+  color: white;
+  padding: 10px 20px 10px 20px;
+  font-weight: 900;
+  border: #DC5E44;
+  
+}
+
+button .button-modif, .button-delete a  {
+  color: white;
+}
+
+.button-delete{
+  background-color: red;
+}
+
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+header img {
+  width: 130px;
+}
+
+header a {
+  text-decoration: none;
+}
+
+/* COVER IMAGE */
+#fusee{
+    
+    width: 100%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+ }
+#fusee img{
+  width:100%
+}
+
+ /* CARD */
+
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 20px;
+  }
+  .card-home{
+    width: 30%;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+  
+  .img1{
+    width: 100%;
+    height: 300px
+  }
+  .img-card{
+    width: 100%;
+    height: 300px;
+  }
+  
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  .container-card {
+    padding: 2px 16px;
+  }
+
+  .container-article{
+    max-height: 100%;
+  }
+
+  .flex-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+  }
+  /* Date Publication */
+  i{
+    font-size: 13px;
+    font-style: italic;
+    
+  }
+
+/* FOOTER */
+  .footer{
+      margin-top: 2%;
+      width: 100%;
+      height: 225px;
+      background-color: #DC5E44;
+      position: relative;
+  }
+  .footer img{
+      text-align: center;
+      position: absolute;
+      left: 45%;  
+  }
+
+/* FORM */
+  label{
+    color: #DC5E44;
+    font-size: 20px;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    font-weight: bolder;
+   
+  }
+  #article_title, #article_content, #article_slug{
+    width: 100%;
+  }
+  .pb-5{
+    margin-top: 2%;
+  }
+
+  #article_content{
+    height: 400px;
+  }
+
+  @media (max-width:768px){
+
+    .flex-card{
+      display: block;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;   
+    }
+
+    .container {
+      width: 100%;
+    } 
+
+    #fusee{
+     
+      width: 100%;
+      margin-top: 3%;
+      margin-bottom: 3%;
+   }
+
+   .card-home, .card-article{
+    width: 90%;
+    margin-right:5;
+    margin-left: 5%;
+  }
+  .img1{
+    width: 100%;
+    height: 300px
+  }
+
+  button{
+    margin-left: 5%;
+  }
+
+  #article_title, #article_content, #article_slug{
+    width: 90%;
+    margin-left: 5%;
+  }
+  }
+
+  /* NavBar responsive */
+
+  .nav {
+    height: 50px;
+    width: 100%;
+    
+    position: relative;
+  }
+  
+  .nav > .nav-header {
+    display: inline;
+  }
+  
+  .nav > .nav-header > .nav-title {
+    display: inline-block;
+    font-size: 22px;
+    
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .nav > .nav-btn {
+    display: none;
+  }
+  
+  .nav > .nav-links {
+    display: inline;
+    float: right;
+    font-size: 18px;
+  }
+  
+  .nav > .nav-links > a {
+    display: inline-block;
+    padding: 13px 10px 13px 10px;
+    text-decoration: none;
+    color: #DC5E44;
+  }
+  
+
+  
+  .nav > #nav-check {
+    display: none;
+  }
+  
+  @media (max-width:900px) {
+    .nav > .nav-btn {
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+    }
+    .nav > .nav-btn > label {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+      padding: 13px;
+    }
+ 
+    .nav > .nav-btn > label > span {
+      display: block;
+      width: 25px;
+      height: 10px;
+      border-top: 2px solid #DC5E44;
+    }
+    .nav > .nav-links {
+      position: absolute;
+      display: block;
+      width: 100%;
+      background-color: #d3d3d3;
+      height: 0px;
+      transition: all 0.3s ease-in;
+      overflow-y: hidden;
+      top: 50px;
+      left: 0px;
+    }
+    .nav > .nav-links > a {
+      display: block;
+      width: 100%;
+    }
+    .nav > #nav-check:not(:checked) ~ .nav-links {
+      height: 0px;
+    }
+    .nav > #nav-check:checked ~ .nav-links {
+      height: calc(100vh - 50px);
+      overflow-y: auto;
+    }
+  }

@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }}accueil
+{% endblock %}
+
+
+
+
+{% block body %}
+<div id="fusee">
+<img src="{{asset('build/images/fusee.png')}}" alt="fusée">
+</div>
+
+
+
+<h2>Nos articles</h2>
+
+<div class="flex-card">
+    {% for article in articles %}
+        <div class="card card-home">
+            <a href="{{ path('article', { id:article.id , slug:article.slug })  }}">
+            <img src="{{ asset('build/upload/') }}{{ article.cover }}" alt="{{ article.title }}" style="width:100%">
+            <div class="container-card">
+                <h4>{{ article.title}}</h4>
+            </div>
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+
+{% endblock %}

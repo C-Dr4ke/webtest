@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ parent() }}Article
+{% endblock %}
+
+
+
+{% block body %}
+
+<a href="{{ path('home') }}"><button>Retour</button></a>
+
+<div class="card card-article">
+    <div class="img1">
+    <img class="img-card" src="{{ asset('build/upload/') }}{{ article.cover }}" alt="{{ article.title }}">
+    </div>
+    <div class="container-card container-article">
+        <h4>{{ article.title}}</h4>
+        {# Permet d'interpréter les balises en code HTML #}
+        {{ article.content|raw }}
+        <p><i> Publié le {{jour}} à {{heure}}</i></p>
+        
+    </div>
+</div>
+
+
+{% endblock %}

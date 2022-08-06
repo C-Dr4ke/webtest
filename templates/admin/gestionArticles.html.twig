@@ -1,0 +1,23 @@
+{% extends "panelAdmin.html.twig" %}
+
+{% block title %}Hello AdminController!{% endblock %}
+
+{% block body %}
+
+
+<h2>Liste des articles</h2>
+
+<div class="flex-card">
+    {% for article in articles %}
+        <div class="card card-home">
+            <img src="{{ asset('build/upload/') }}{{ article.cover }}" alt="{{ article.title }}" style="width:100%">
+            <div class="container-card">
+                <h4>{{ article.title}}</h4>
+                <button><a class="button-modif" href="{{ path('modifier', { id:article.id })  }}">Modifier</a> </button>
+                <button class="button-delete"><a href="{{ path('supprimer', { id:article.id })  }}">supprimer</a> </button>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}
